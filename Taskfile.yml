@@ -1,14 +1,14 @@
 version: "3"
 
 tasks:
-  venv:
-    cmds:
-      - python3 -m venv .venv
 
   install:
     cmds:
-      - python3 -m pip install --upgrade pip
-      - python3 -m pip install --progress-bar off -- -r requirements.txt
+      - poetry install
+
+  install:
+    cmds:
+      - ruff format .
 
   setup:
     cmds:
